@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hackday Hello World</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap">
+<style>
+  /* Layout: one square yellow block centred on black, greeting set bottom-left inside it */
+  :root {
+    --bg: #000000;
+    --block: #fde21a;
+    --block-fg: #000000;
+    --display: "Gotham", "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: dark;
+  }
+
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg);
+    display: grid;
+    place-items: center;
+    padding-block: 24px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    box-sizing: border-box;
+  }
+  .block {
+    background: var(--block);
+    color: var(--block-fg);
+    width: min(100%, max(500px, 35vw), 75vh);
+    aspect-ratio: 1;
+    max-width: 100%;
+    box-sizing: border-box;
+    container-type: inline-size;
+    display: grid;
+    place-items: end start;
+  }
+  h1 {
+    margin: 0;
+    padding: 0 8.8cqi 9.8cqi;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 21.45cqi;
+    line-height: 0.99;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+</style>
+</head>
+<body>
+<main class="block">
+  <h1>hello<br>world.</h1>
+</main>
+</body>
+</html>
